@@ -1,0 +1,294 @@
+
+h1{
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-top: 10px;
+}
+
+
+h2{
+	color: $bordo;
+	font-style: italic;
+	font-size: 1.6rem;
+	margin-top: 15px;
+}
+
+
+.banner{
+	background-image: url(../media/banner.png);
+	max-height: 500px;
+	height: 60vh;
+	background-position: center;
+	background-size: cover;
+	box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.55);
+	-webkit-box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.55);
+	-moz-box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.55);
+	background-repeat: no-repeat;
+	opacity: .8;
+}
+
+@media all and (max-width: 540px){
+	.banner{
+		background-image: url(../media/banner-mob.jpg);}
+}
+
+
+body{
+	font-family: $fuentePrincipal;
+	font-size: 1.2rem;
+	line-height: 1.5;
+	background-color: $beige;
+}
+
+.logo{
+	height: 200px;
+}
+
+.bgNavPropio{
+	background-color: $mostaza;
+}
+
+.navbar-nav a:hover{
+	transform:scale(1.2) ;
+}
+
+.boton{
+	text-decoration: none;
+	color: #76323f;
+	background-color: #c09f80;
+	padding: 3px;
+	border-radius: 5px;
+	text-transform: uppercase;
+	font-weight: bold;
+	transition: background-color 300ms;
+}
+
+.boton:hover{
+	background-color: $beige;
+	text-decoration: none;
+	color: $bordo;
+}
+
+.botonModal{
+	text-decoration: none;
+	color: $bordo;
+	background-color: $mostaza;
+	padding: 3px;
+	border-radius: 5px;}
+
+.bgMogal{
+	background-color: $bordo;}
+
+
+footer{
+	margin-top: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding:.2rem 1rem;
+	box-shadow: 0px -3px 5px 0px rgba(0,0,0,0.45);
+	-webkit-box-shadow: 0px -3px 5px 0px rgba(0,0,0,0.45);
+	-moz-box-shadow: 0px -3px 5px 0px rgba(0,0,0,0.45);
+	font-size: 1rem;
+
+	.iconoW {
+	  position: fixed;
+	  width: 40px;
+	  height: 40px;
+	  bottom: 5px;
+	  right: 5px; }
+}
+
+
+.contenedorInicio{
+	margin: $contenedor;}
+
+
+@media all and (min-width: 768px){
+	.contenedorInicio{
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		grid-template-areas:
+		"blog cur"
+		"blog cur";
+		grid-column-gap: 5px;}
+
+	.inicioBlog{
+		grid-area: blog;}
+
+	.inicioCursos{
+		grid-area: cur;
+		justify-self: center;}
+}
+
+
+.contenedorBlog{
+	margin: $contenedor;
+
+	h2 {text-align: center;}
+
+	ul, ol {
+		list-style-position: inside;
+		padding: 0;
+
+		li{
+			margin-left: 20px;}
+	}
+}
+
+@media all and (min-width: 768px){
+	#blog1{
+		display: grid;
+		grid-template-areas: 
+			"titulo titulo"
+			"p1 p1"
+			"p2 p2"
+			"p3 p3"
+			"sub img"
+			"p4 img"
+			"p5 p5"
+			"p6 p6";
+		grid-template-columns: repeat(2, 1fr);
+		grid-row-gap: 15px;
+	
+		h2{
+			grid-area: titulo;}
+
+		.blogp1{
+			grid-area: p1;}
+
+		.blogp2{
+			grid-area: p2;}
+
+		h3{
+			grid-area: sub;}
+
+		.blogp3{
+			grid-area: p3;}
+
+		.blogp4{
+			grid-area: p4;}
+
+		.blogp5{
+			grid-area: p5;}
+
+		.blogp6{
+			grid-area: p6;}
+
+		.imagenBlog1{
+			grid-area: img;
+			max-height: 350px;
+			justify-self: center;
+			border-radius: 5px;}
+	}  
+}
+
+
+.frase{
+	font-family: $fuenteCursiva;
+	font-size: 1.6rem;
+	background-color: $oscuro;
+	margin: $contenedor;
+	text-align: center;
+	border-radius: 5px;}
+
+.contenedorCursos{
+	margin: $contenedor;
+
+	&.boton{ 
+		margin-bottom: 50px;}
+	h2{
+		text-align: center;}
+
+	img{
+		margin-top: 15px;}
+}
+
+@media all and (min-width: 768px){
+	.contenedorCursos{
+		margin: $contenedor;
+
+		#curso1{
+			display: grid;
+			grid-template-areas: 
+				"titulo titulo"
+				"desc desc"
+				"obj obj"
+				"det img"
+				"boton .";
+			grid-template-columns: 2fr 1fr;	
+
+			h2{
+				grid-area: titulo;}
+
+			.descripcion{
+				grid-area: desc;}
+
+			.objetivo{
+				grid-area: obj;}
+
+			ul{
+				grid-area: det;
+				list-style-position: inside;}
+
+			a{
+				grid-area: boton;
+				justify-self: center;}
+
+			img{
+				grid-area: img;
+				max-width: 350px;
+				border-radius: 5px;}
+			}
+
+		#curso2{
+			display: grid;
+			grid-template-areas: 
+				"titulo titulo"
+				"desc img"
+				"det img"
+				"boton .";
+			grid-template-columns: 2fr 1fr;
+			grid-template-rows: auto;
+
+			h2{
+				grid-area: titulo;}
+
+			p{
+				grid-area: desc;}
+
+			ul{
+				grid-area: det;
+				list-style-position: inside;}
+
+			a{
+				grid-area: boton;
+				justify-self: center;}
+
+			img{
+				grid-area: img;
+				max-width: 350px;
+				border-radius: 5px;}
+			}
+		}
+	}
+
+.contenedorNosotros p{
+	text-align: center;
+	margin-bottom: 10px;}
+
+form{
+	max-width: 1100px;
+	margin: auto;
+
+	fieldset{
+		color: $oscuro;
+		padding: 10px;}
+
+	legend{
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: bold;}
+	}

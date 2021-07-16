@@ -43,6 +43,9 @@ body {
 .navbar-nav a:hover {
   transform: scale(1.2); }
 
+.bgBordo {
+  background-color: #76323f; }
+
 .boton {
   text-decoration: none;
   color: #76323f;
@@ -86,20 +89,22 @@ footer {
     bottom: 5px;
     right: 5px; }
 
-.contenedorInicio {
-  margin: 20px; }
+.contenedorCard {
+  margin: 20px;
+  flex-direction: column;
+  align-items: center; }
 
 @media all and (min-width: 768px) {
-  .contenedorInicio {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-areas: "blog cur" "blog cur";
-    grid-column-gap: 5px; }
-  .inicioBlog {
-    grid-area: blog; }
-  .inicioCursos {
-    grid-area: cur;
-    justify-self: center; } }
+  .contenedorCard {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch; } }
+
+.contenedorInicio {
+  margin: 20px;
+  text-align: center; }
+  .contenedorInicio .borde {
+    border-top: solid 1px #565656; }
 
 .contenedorBlog {
   margin: 20px; }

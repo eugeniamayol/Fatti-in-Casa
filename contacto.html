@@ -18,7 +18,7 @@
 <body>
 	
 	<header>
-		<nav class="navbar navbar-expand-lg navbar-light bgNavPropio">
+		<nav class="navbar navbar-expand-sm navbar-light bgNavPropio">
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
 		  </button>
@@ -40,34 +40,27 @@
 
 	<h1>- Contáctanos -</h1>
 	
-	<form action="" method="post" enctype="">
+	<form action="" method="post" enctype="" class="d-flex justify-content-center">
 		<fieldset>
 			<legend>Déjanos tus datos aquí</legend>
 
 			<div>
-				<label for="nombre">Nombre y Apellido:</label>
-				<input type="text" name="nombre" placeholder="Tu Nombre Completo" id="nombre">
+				<label for="nombre">Nombre y Apellido</label>
+				<input type="text" name="nombre" id="nombre">
 			</div>
 			
 			<div>
-				<label for="email">Email:</label>
-				<input type="email" name="email" placeholder="Tu Email" id="email">
+				<label for="email">Email</label>
+				<input type="email" name="email" id="email">
 			</div>
 
 			<div>
-				<label for="tel">Teléfono:</label>
-				<input type="tel" name="tel" placeholder="Tu Teléfono" id="tel">
+				<label for="tel">Teléfono</label>
+				<input type="tel" name="tel" id="tel">
 			</div>
 
-			<select name="cursos">
-				<option disabled selected>Selecciona una opción</option>
-				<option value="1">Mis primeros fideos caseros</option>
-				<option value="2">Salsas tradicionales</option>
-				<option value="3">Otros motivos</option>
-			</select>
-
 			<div>
-				<textarea placeholder="Escribe tu mensaje aquí"></textarea>
+				<textarea placeholder="Escribe tu mensaje aquí" class="mensaje"></textarea>
 			</div>
 
 			<div>
@@ -95,7 +88,7 @@
 		</div>
 
 		<div>
-			<p>Todos los derechos reservados. Fatti in Casa</p>
+			<p class="pt-2">Todos los derechos reservados. Fatti in Casa</p>
 		</div>
 
 		<div>

@@ -1,19 +1,29 @@
+/* Generales*/
 
 h1{
+	font-family: $fuenteCursiva;
+	font-weight: bold;
+	font-size: 3rem;
 	text-align: center;
-	text-transform: uppercase;
-	font-weight: 700;
-	margin-top: 10px;
-}
-
+	margin: 2rem;}
 
 h2{
-	color: $bordo;
-	font-style: italic;
-	font-size: 1.6rem;
+	font-size: 2rem;
 	margin-top: 15px;
+	color: $bordo;
+	text-transform: uppercase;
+	font-weight: bold;}
+
+h5{
+	color: $mostaza;
+	font-weight: bold;
 }
 
+.bgNavPropio{
+	background-color: $mostaza;}
+
+.bgBordo{
+	background-color: $bordo;}
 
 .banner{
 	background-image: url(../media/banner.png);
@@ -25,90 +35,79 @@ h2{
 	-webkit-box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.55);
 	-moz-box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.55);
 	background-repeat: no-repeat;
-	opacity: .8;
-}
+	opacity: .8;}
 
 @media all and (max-width: 540px){
 	.banner{
-		background-image: url(../media/banner-mob.jpg);}
-}
-
+		background-image: url(../media/banner-mob.jpg);}}
 
 body{
 	font-family: $fuentePrincipal;
 	font-size: 1.2rem;
 	line-height: 1.5;
-	background-color: $beige;
-}
+	background-color: $beige;}
 
 .logo{
-	height: 200px;
-}
-
-.bgNavPropio{
-	background-color: $mostaza;
-}
+	height: 200px;}
 
 .navbar-nav a:hover{
-	transform:scale(1.2) ;
-}
+	transform:scale(1.2) ;}
 
-.bgBordo{
-	background-color: $bordo;
-}
-
-.boton{
+@mixin estiloBoton{
 	text-decoration: none;
 	color: #76323f;
 	background-color: #c09f80;
 	padding: 3px;
+	border: none;
 	border-radius: 5px;
 	text-transform: uppercase;
 	font-weight: bold;
-	transition: background-color 300ms;
-}
+	transition: background-color 300ms;}
 
-.boton:hover{
-	background-color: $beige;
-	text-decoration: none;
-	color: $bordo;
-}
+.boton{
+ 	@include estiloBoton;
 
-.botonModal{
-	text-decoration: none;
-	color: $bordo;
-	background-color: $mostaza;
-	padding: 3px;
-	border-radius: 5px;}
-
-.bgMogal{
-	background-color: $bordo;}
-
+	&:hover{
+		cursor: pointer;
+		background-color: $beige;
+		text-decoration: none;
+		color: $bordo;}
+	}
 
 footer{
-	margin-top: 10px;
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: flex-end;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10px;
 	padding:.2rem 1rem;
 	box-shadow: 0px -3px 5px 0px rgba(0,0,0,0.45);
 	-webkit-box-shadow: 0px -3px 5px 0px rgba(0,0,0,0.45);
 	-moz-box-shadow: 0px -3px 5px 0px rgba(0,0,0,0.45);
-	font-size: 1rem;
+	font-size: 1rem;}
 
-	.iconoW {
-	  position: fixed;
-	  width: 40px;
-	  height: 40px;
-	  bottom: 5px;
-	  right: 5px; }
-}
+@media all and (min-width: 392px){
+	footer{
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-end;
+		
+		.iconoW {
+		  position: fixed;
+		  width: 40px;
+		  height: 40px;
+		  bottom: 5px;
+		  right: 5px; }
+		}
+	}
 
+/*Inicio*/
 
 .contenedorCard{
 	margin: $contenedor;
+	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	align-items: center;
 }
 
@@ -116,20 +115,19 @@ footer{
 	.contenedorCard{
 		flex-direction: row;
 		justify-content: space-evenly;
-		align-items: stretch;}
+		align-items: center;}
 }
 
 
 .contenedorInicio{
 	margin: $contenedor;
-	text-align: center;
+	text-align: center;}
 
-	.borde{
-		border-top: solid 1px $oscuro;
-	}
-}
+.borde{
+	border-top: solid 1px $claro;}
 
 
+/*Blog*/
 
 .contenedorBlog{
 	margin: $contenedor;
@@ -141,8 +139,10 @@ footer{
 		padding: 0;
 
 		li{
-			margin-left: 20px;}
-	}
+			margin-left: 20px;
+			margin-bottom: 10px}}
+	img{
+		max-height: 400px;}
 }
 
 @media all and (min-width: 768px){
@@ -158,7 +158,7 @@ footer{
 			"p5 p5"
 			"p6 p6";
 		grid-template-columns: repeat(2, 1fr);
-		grid-row-gap: 15px;
+		grid-row-gap: 2px;
 	
 		h2{
 			grid-area: titulo;}
@@ -185,117 +185,126 @@ footer{
 			grid-area: p6;}
 
 		.imagenBlog1{
+			display: block;
 			grid-area: img;
 			max-height: 350px;
+			width: 500px;
 			justify-self: center;
 			border-radius: 5px;}
 	}  
 }
 
 
+/*Cursos*/
+
 .frase{
 	font-family: $fuenteCursiva;
 	font-size: 1.6rem;
-	background-color: $oscuro;
-	margin: $contenedor;
+	background-color: $claro;
+	width: 70%;
+	margin: auto;
+	padding: 1.5rem;
 	text-align: center;
 	border-radius: 5px;}
 
 .contenedorCursos{
 	margin: $contenedor;
+	text-align: center;}
 
-	&.boton{ 
-		margin-bottom: 50px;}
-	h2{
-		text-align: center;}
-
-	img{
-		margin-top: 15px;}
-}
+.contenedorCirculos{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;}
 
 @media all and (min-width: 768px){
-	.contenedorCursos{
-		margin: $contenedor;
+	.contenedorCirculos{
+		flex-direction: row;}
+}
 
-		#curso1{
-			display: grid;
-			grid-template-areas: 
-				"titulo titulo"
-				"desc desc"
-				"obj obj"
-				"det img"
-				"boton .";
-			grid-template-columns: 2fr 1fr;	
+.circulo{
+		width:200px; 
+		height:200px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
 
-			h2{
-				grid-area: titulo;}
+	&.bgPastas{
+		background-image: url(../media/curso1.png);
+		background-position: center;
+		background-size: cover;}
 
-			.descripcion{
-				grid-area: desc;}
-
-			.objetivo{
-				grid-area: obj;}
-
-			ul{
-				grid-area: det;
-				list-style-position: inside;}
-
-			a{
-				grid-area: boton;
-				justify-self: center;}
-
-			img{
-				grid-area: img;
-				max-width: 350px;
-				border-radius: 5px;}
-			}
-
-		#curso2{
-			display: grid;
-			grid-template-areas: 
-				"titulo titulo"
-				"desc img"
-				"det img"
-				"boton .";
-			grid-template-columns: 2fr 1fr;
-			grid-template-rows: auto;
-
-			h2{
-				grid-area: titulo;}
-
-			p{
-				grid-area: desc;}
-
-			ul{
-				grid-area: det;
-				list-style-position: inside;}
-
-			a{
-				grid-area: boton;
-				justify-self: center;}
-
-			img{
-				grid-area: img;
-				max-width: 350px;
-				border-radius: 5px;}
-			}
-		}
+	&.bgSalsas{
+		background-image: url(../media/curso2.png);
+		background-position: center;
+		background-size: cover;}
 	}
+
+
+
+
+
+
+/*Nosotros*/
 
 .contenedorNosotros p{
 	text-align: center;
 	margin-bottom: 10px;}
 
-form{
-	max-width: 1100px;
-	margin: auto;
+.botonModal{
+	text-decoration: none;
+	color: $bordo;
+	background-color: $mostaza;
+	padding: 3px;
+	border-radius: 5px;}
 
+.bgMogal{
+	background-color: $bordo;}
+
+
+/*Contacto*/
+
+@mixin estiloForm{
+	background-color: #eeeeee;
+	border: none;
+	width: 100%;
+	text-align: center;
+	border-radius: 5px;
+	margin-bottom: 1rem;}
+
+
+form{
+
+	margin: $contenedor;
+	
+	div{
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 700;}
+	
+	& #nombre, #tel, #email, .botonSelect, .mensaje {
+		@include estiloForm;}
+
+
+	label{
+		margin-bottom: 0;}
+	
+	
 	fieldset{
-		color: $oscuro;
-		padding: 10px;}
+		color: $oscuro;}
 
 	legend{
 		text-align: center;
 		text-transform: uppercase;
-		font-weight: bold;}
+		font-weight: bold;
+		margin: 15px 0;}
+
+	.enviar{
+		width: 100%;
+		margin-bottom: 25px;}
 	}
+	
+
+
+

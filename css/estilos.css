@@ -1,16 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&display=swap");
+/* Generales*/
 h1 {
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  font-size: 3rem;
   text-align: center;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-top: 10px; }
+  margin: 2rem; }
 
 h2 {
+  font-size: 2rem;
+  margin-top: 15px;
   color: #76323f;
-  font-style: italic;
-  font-size: 1.6rem;
-  margin-top: 15px; }
+  text-transform: uppercase;
+  font-weight: bold; }
+
+h5 {
+  color: #c09f80;
+  font-weight: bold; }
+
+.bgNavPropio {
+  background-color: #c09f80; }
+
+.bgBordo {
+  background-color: #76323f; }
 
 .banner {
   background-image: url(../media/banner.png);
@@ -37,75 +50,71 @@ body {
 .logo {
   height: 200px; }
 
-.bgNavPropio {
-  background-color: #c09f80; }
-
 .navbar-nav a:hover {
   transform: scale(1.2); }
-
-.bgBordo {
-  background-color: #76323f; }
 
 .boton {
   text-decoration: none;
   color: #76323f;
   background-color: #c09f80;
   padding: 3px;
+  border: none;
   border-radius: 5px;
   text-transform: uppercase;
   font-weight: bold;
   transition: background-color 300ms; }
-
-.boton:hover {
-  background-color: #d7cec7;
-  text-decoration: none;
-  color: #76323f; }
-
-.botonModal {
-  text-decoration: none;
-  color: #76323f;
-  background-color: #c09f80;
-  padding: 3px;
-  border-radius: 5px; }
-
-.bgMogal {
-  background-color: #76323f; }
+  .boton:hover {
+    cursor: pointer;
+    background-color: #d7cec7;
+    text-decoration: none;
+    color: #76323f; }
 
 footer {
-  margin-top: 10px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
   padding: .2rem 1rem;
   box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.45);
   -webkit-box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.45);
   -moz-box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.45);
   font-size: 1rem; }
-  footer .iconoW {
-    position: fixed;
-    width: 40px;
-    height: 40px;
-    bottom: 5px;
-    right: 5px; }
 
+@media all and (min-width: 392px) {
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end; }
+    footer .iconoW {
+      position: fixed;
+      width: 40px;
+      height: 40px;
+      bottom: 5px;
+      right: 5px; } }
+
+/*Inicio*/
 .contenedorCard {
   margin: 20px;
+  display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center; }
 
 @media all and (min-width: 768px) {
   .contenedorCard {
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: stretch; } }
+    align-items: center; } }
 
 .contenedorInicio {
   margin: 20px;
   text-align: center; }
-  .contenedorInicio .borde {
-    border-top: solid 1px #565656; }
 
+.borde {
+  border-top: solid 1px #eeeeee; }
+
+/*Blog*/
 .contenedorBlog {
   margin: 20px; }
   .contenedorBlog h2 {
@@ -114,14 +123,17 @@ footer {
     list-style-position: inside;
     padding: 0; }
     .contenedorBlog ul li, .contenedorBlog ol li {
-      margin-left: 20px; }
+      margin-left: 20px;
+      margin-bottom: 10px; }
+  .contenedorBlog img {
+    max-height: 400px; }
 
 @media all and (min-width: 768px) {
   #blog1 {
     display: grid;
     grid-template-areas: "titulo titulo" "p1 p1" "p2 p2" "p3 p3" "sub img" "p4 img" "p5 p5" "p6 p6";
     grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: 15px; }
+    grid-row-gap: 2px; }
     #blog1 h2 {
       grid-area: titulo; }
     #blog1 .blogp1 {
@@ -139,82 +151,92 @@ footer {
     #blog1 .blogp6 {
       grid-area: p6; }
     #blog1 .imagenBlog1 {
+      display: block;
       grid-area: img;
       max-height: 350px;
+      width: 500px;
       justify-self: center;
       border-radius: 5px; } }
 
+/*Cursos*/
 .frase {
   font-family: "Dancing Script", cursive;
   font-size: 1.6rem;
-  background-color: #565656;
-  margin: 20px;
+  background-color: #eeeeee;
+  width: 70%;
+  margin: auto;
+  padding: 1.5rem;
   text-align: center;
   border-radius: 5px; }
 
 .contenedorCursos {
-  margin: 20px; }
-  .contenedorCursos.boton {
-    margin-bottom: 50px; }
-  .contenedorCursos h2 {
-    text-align: center; }
-  .contenedorCursos img {
-    margin-top: 15px; }
+  margin: 20px;
+  text-align: center; }
+
+.contenedorCirculos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly; }
 
 @media all and (min-width: 768px) {
-  .contenedorCursos {
-    margin: 20px; }
-    .contenedorCursos #curso1 {
-      display: grid;
-      grid-template-areas: "titulo titulo" "desc desc" "obj obj" "det img" "boton .";
-      grid-template-columns: 2fr 1fr; }
-      .contenedorCursos #curso1 h2 {
-        grid-area: titulo; }
-      .contenedorCursos #curso1 .descripcion {
-        grid-area: desc; }
-      .contenedorCursos #curso1 .objetivo {
-        grid-area: obj; }
-      .contenedorCursos #curso1 ul {
-        grid-area: det;
-        list-style-position: inside; }
-      .contenedorCursos #curso1 a {
-        grid-area: boton;
-        justify-self: center; }
-      .contenedorCursos #curso1 img {
-        grid-area: img;
-        max-width: 350px;
-        border-radius: 5px; }
-    .contenedorCursos #curso2 {
-      display: grid;
-      grid-template-areas: "titulo titulo" "desc img" "det img" "boton .";
-      grid-template-columns: 2fr 1fr;
-      grid-template-rows: auto; }
-      .contenedorCursos #curso2 h2 {
-        grid-area: titulo; }
-      .contenedorCursos #curso2 p {
-        grid-area: desc; }
-      .contenedorCursos #curso2 ul {
-        grid-area: det;
-        list-style-position: inside; }
-      .contenedorCursos #curso2 a {
-        grid-area: boton;
-        justify-self: center; }
-      .contenedorCursos #curso2 img {
-        grid-area: img;
-        max-width: 350px;
-        border-radius: 5px; } }
+  .contenedorCirculos {
+    flex-direction: row; } }
 
+.circulo {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  .circulo.bgPastas {
+    background-image: url(../media/curso1.png);
+    background-position: center;
+    background-size: cover; }
+  .circulo.bgSalsas {
+    background-image: url(../media/curso2.png);
+    background-position: center;
+    background-size: cover; }
+
+/*Nosotros*/
 .contenedorNosotros p {
   text-align: center;
   margin-bottom: 10px; }
 
+.botonModal {
+  text-decoration: none;
+  color: #76323f;
+  background-color: #c09f80;
+  padding: 3px;
+  border-radius: 5px; }
+
+.bgMogal {
+  background-color: #76323f; }
+
+/*Contacto*/
 form {
-  max-width: 1100px;
-  margin: auto; }
+  margin: 20px; }
+  form div {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700; }
+  form #nombre, form #tel, form #email, form .botonSelect, form .mensaje {
+    background-color: #eeeeee;
+    border: none;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 1rem; }
+  form label {
+    margin-bottom: 0; }
   form fieldset {
-    color: #565656;
-    padding: 10px; }
+    color: #565656; }
   form legend {
     text-align: center;
     text-transform: uppercase;
-    font-weight: bold; }
+    font-weight: bold;
+    margin: 15px 0; }
+  form .enviar {
+    width: 100%;
+    margin-bottom: 25px; }

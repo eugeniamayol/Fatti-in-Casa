@@ -142,7 +142,8 @@ footer{
 			margin-left: 20px;
 			margin-bottom: 10px}}
 	img{
-		max-height: 400px;}
+		max-height: 550px;
+		border-radius: 5px;}
 }
 
 @media all and (min-width: 768px){
@@ -187,10 +188,9 @@ footer{
 		.imagenBlog1{
 			display: block;
 			grid-area: img;
-			max-height: 350px;
+			max-height: 500px;
 			width: 500px;
-			justify-self: center;
-			border-radius: 5px;}
+			justify-self: center;}
 	}  
 }
 

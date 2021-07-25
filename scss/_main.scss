@@ -258,6 +258,9 @@ footer{
 .bgMogal{
 	background-color: $bordo;}
 
+.carousel-indicators li{
+	width: 10px;
+	height: 10px;}
 
 /*Contacto*/
 
@@ -267,7 +270,8 @@ footer{
 	width: 100%;
 	text-align: center;
 	border-radius: 5px;
-	margin-bottom: 1rem;}
+	margin-bottom: 1rem;
+}
 
 
 form{
@@ -280,7 +284,12 @@ form{
 		font-weight: 700;}
 	
 	& #nombre, #tel, #email, .botonSelect, .mensaje {
-		@include estiloForm;}
+		@include estiloForm
+		resize: none;
+
+		&:focus-visible{
+			outline-color: $bordo;}
+		}
 
 
 	label{
@@ -298,7 +307,8 @@ form{
 
 	.enviar{
 		width: 100%;
-		margin-bottom: 25px;}
+		margin-bottom: 25px;
+		}
 	}
 	
 

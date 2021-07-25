@@ -214,6 +214,10 @@ footer {
 .bgMogal {
   background-color: #76323f; }
 
+.carousel-indicators li {
+  width: 10px;
+  height: 10px; }
+
 /*Contacto*/
 form {
   margin: 20px; }
@@ -227,7 +231,10 @@ form {
     width: 100%;
     text-align: center;
     border-radius: 5px;
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    resize: none; }
+    form #nombre:focus-visible, form #tel:focus-visible, form #email:focus-visible, form .botonSelect:focus-visible, form .mensaje:focus-visible {
+      outline-color: #76323f; }
   form label {
     margin-bottom: 0; }
   form fieldset {

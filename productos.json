@@ -1,0 +1,40 @@
+{
+  "cursos":
+    [
+      { "id": 1,
+        "nombre": "Fideos Caseros",
+        "precio": 3000,
+        "duracion": 3,
+        "descripcion": "Aprende desde la comodidad de tu casa. Es un curso inicial donde estudiarás la técnica escencial para hacer fideos caseros. Este curso está orientado a todas aquellas personas que estén interesadas en aprender a elaborar fideos en forma artesanal.",   
+        "imagen": "media/curso1.png"
+      },
+      { "id": 2,
+        "nombre": "Salsas Tradicionales",
+        "precio": 900,
+        "duracion": 1,
+        "descripcion": "Es un curso donde aprenderás las recetas básicas y tips para que hagas las mejores salsas para acompañar tus pastas. Saldrás con conocimientos sobre la Salsa Bolognesa, Salsa 4 Quesos, Salsa Amatriciana, Salsa Alfredo y Salsa Carbonara.",  
+        "imagen": "media/curso2.png"
+      },
+      { "id": 3,
+        "nombre": "Ravioles Caseros",
+        "precio": 2300,
+        "duracion": 2.5,
+        "descripcion": "Curso inicial donde estudiarás la técnica escencial para hacer ravioles caseros. Este curso está orientado a todas aquellas personas que estén interesadas en aprender a elaborar ravioles en forma artesanal como para microemprendimientos.",
+        "imagen": "media/curso3.png"
+      },
+      { "id": 4,
+        "nombre": "Sorrentinos Caseros",
+        "precio": 2000,
+        "duracion": 2,
+        "descripcion": "Curso inicial donde estudiarás la técnica escencial para hacer sorrentinos caseros. Este curso está orientado a todas aquellas personas que estén interesadas en aprender a elaborar sorrentinos en forma artesanal, así como para micro emprendedores de catering.",
+        "imagen": "media/curso4.png"
+      },
+      { "id": 5,
+        "nombre": "Ñoquis Caseros",
+        "precio": 2000,
+        "duracion": 1.5,
+        "descripcion": "Curso inicial donde estudiarás la técnica escencial para hacer ñoquis caseros. Este curso está orientado a todas aquellas personas que estén interesadas en aprender a elaborar ñoquis en forma artesanal, así como para micro emprendedores de catering.",
+        "imagen": "media/curso5.png"
+      }
+    ]
+}

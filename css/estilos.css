@@ -19,11 +19,23 @@ h5 {
   color: #c09f80;
   font-weight: bold; }
 
+.oculto {
+  display: none; }
+
+.visible {
+  display: inline; }
+
 .bgNavPropio {
   background-color: #c09f80; }
 
 .bgBordo {
   background-color: #76323f; }
+
+.bgGris {
+  background-color: #eeeeee; }
+
+span {
+  font-weight: bold; }
 
 .banner {
   background-image: url(../media/banner.png);
@@ -62,6 +74,7 @@ body {
   border-radius: 5px;
   text-transform: uppercase;
   font-weight: bold;
+  outline: none;
   transition: background-color 300ms; }
   .boton:hover {
     cursor: pointer;
@@ -169,35 +182,14 @@ footer {
   text-align: center;
   border-radius: 5px; }
 
-.contenedorCursos {
+#contenedorCursos {
   margin: 20px;
-  text-align: center; }
-
-.contenedorCirculos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly; }
-
-@media all and (min-width: 768px) {
-  .contenedorCirculos {
-    flex-direction: row; } }
-
-.circulo {
-  width: 200px;
-  height: 200px;
+  text-align: center;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center; }
-  .circulo.bgPastas {
-    background-image: url(../media/curso1.png);
-    background-position: center;
-    background-size: cover; }
-  .circulo.bgSalsas {
-    background-image: url(../media/curso2.png);
-    background-position: center;
-    background-size: cover; }
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap; }
 
 /*Nosotros*/
 .contenedorNosotros p {

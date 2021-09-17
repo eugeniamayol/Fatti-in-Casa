@@ -22,17 +22,26 @@
 	
 	<header>
 		<nav class="navbar navbar-expand-sm navbar-light bgNavPropio">
-		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-		    <span class="navbar-toggler-icon"></span>
-		  </button>
 		  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 		    <div class="navbar-nav m-auto text-uppercase">
 		      <a class="nav-link" href="index.html">Inicio</a>
 		      <a class="nav-link" href="blog.html">Blog</a>
 		      <a class="nav-link active" href="cursos.html">Cursos</a>
 		      <a class="nav-link" href="nosotros.html">Nosotros</a>
-		      <a class="nav-link" href="contacto.html">Contacto</a>
+		      <a class="nav-link" href="contacto.html">Contacto</a>    
 		    </div>
+		  </div>
+		  <div id="carrito" style="display: none;">
+		    	<a class="nav-link" href="carrito.html"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#76323f" fill="none" stroke-linecap="round" stroke-linejoin="round" rel="noreferrer noopener">
+					  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+					  <circle cx="6" cy="19" r="2" />
+					  <circle cx="17" cy="19" r="2" />
+					  <path d="M17 17h-11v-14h-2" />
+					  <path d="M6 5l14 1l-1 7h-13" />
+					</svg></a>
+		  </div>
+		  <div id="contador" class="rounded-circle bgBordo px-2 text-white">
+		  	
 		  </div>
 		</nav>
 
@@ -45,58 +54,18 @@
 
 	<p class="frase">"La vida es una combinación de magia y pastas". Federico Fellini</p>
 
-	<div class="contenedorCursos">
-		<div id="curso1">
-			<h2>Mis primeros fideos caseros</h2>
-			
-			<p>Aprende desde la comodidad de tu casa. Es un curso inicial donde estudiarás la técnica escencial para hacer fideos caseros. Este curso está orientado a todas aquellas personas que estén interesadas en aprender a elaborar fideos en forma artesanal, así como para micro emprendedores de catering.</p>
+	<div class="mt-5 d-flex">
+    <select id="miSeleccion" class="form-select m-auto">
+       <option selected>ORDENAR</option>
+       <option value="menor">Por menor precio</option>
+       <option value="mayor">Por mayor precio</option>
+       <option value="duracion">Por menor duración</option>
+    </select>
+  </div>
 
-			<p>¿Objetivos? Aprender las técnicas básicas de preparación, cocción y manipulación. Aplicar las técnicas aprendidas de manera práctica para lograr óptimos resultados. Aprender formas de presentación de platos. Conocer las cualidades y calidad de las materias primas que se usarán en las diversas recetas. Conocer los utensilios básicos de cocina para pastas y aprender su uso correcto.</p>
-
-			<p>Una vez inscripto te llegará un correo con todo lo que tienes que tener para aprovechar al máximo la cursada.</p>
-		</div>
-
-		<div class="contenedorCirculos">
-			<div class="circulo rounded-circle bgPastas mb-3 mb-md-0" data-aos="flip-right">
-				<p class="font-weight-bold">100% virtual</p>
-			</div>
-			<div class="circulo rounded-circle bgPastas mb-3 mb-md-0" data-aos="flip-right">
-				<p class="font-weight-bold">3 horas</p>
-			</div>
-			<div class="circulo rounded-circle bgPastas mb-3 mb-md-0" data-aos="flip-right">
-				<p class="font-weight-bold">$3.000</p>
-			</div>
-			<div class="circulo rounded-circle" data-aos="flip-right">
-				<a class="boton" href="https://www.mercadopago.com.ar/point/invite?code=V1C70X&utm_experiment=optimize&utm_source=google&utm_medium=cpc&utm_campaign=MLA_MP_G_AO_P_ALL_SEARCH_SELL_CONV_RMKTMP&utm_word=mercadopago&matt_tool=19514906&matt_word=rmktmp&gclid=Cj0KCQjw8vqGBhC_ARIsADMSd1DK4PhMWgTwJZ8zoKQFhH4NcztIO77hHySs7IvKI21Fcjl8r695IUYaAptCEALw_wcB" target="_blank" rel="noreferrer noopener">Comprar</a>
-			</div>
-		</div>
-
-		<div id="curso2" class="my-5">
-			<h2>Salsas tradicionales</h2>
-			
-			<p>Es un curso donde aprenderás las recetas básicas y tips para que hagas las mejores salsas para acompañar tus pastas. Saldrás con conocimientos sobre la Salsa Bolognesa, Salsa 4 Quesos, Salsa Amatriciana, Salsa Alfredo y Salsa Carbonara. </p>
-
-			<p>Una vez inscripto te llegará un correo con todo lo que tienes que tener para aprovechar al máximo la cursada.</p>
-		</div>
-
-	
-		<div class="contenedorCirculos">
-			<div class="circulo rounded-circle bgSalsas mb-3 mb-md-0" data-aos="flip-right">
-				<p class="font-weight-bold">100% virtual</p>
-			</div>
-			<div class="circulo rounded-circle bgSalsas mb-3 mb-md-0" data-aos="flip-right">
-				<p class="font-weight-bold">1 hora y media</p>
-			</div>
-			<div class="circulo rounded-circle bgSalsas mb-3 mb-md-0" data-aos="flip-right">
-				<p class="font-weight-bold">$900</p>
-			</div>
-			<div class="circulo rounded-circle" data-aos="flip-right">
-				<a class="boton" href="https://www.mercadopago.com.ar/point/invite?code=V1C70X&utm_experiment=optimize&utm_source=google&utm_medium=cpc&utm_campaign=MLA_MP_G_AO_P_ALL_SEARCH_SELL_CONV_RMKTMP&utm_word=mercadopago&matt_tool=19514906&matt_word=rmktmp&gclid=Cj0KCQjw8vqGBhC_ARIsADMSd1DK4PhMWgTwJZ8zoKQFhH4NcztIO77hHySs7IvKI21Fcjl8r695IUYaAptCEALw_wcB" target="_blank" rel="noreferrer noopener">Comprar</a>
-			</div>
-		</div>
+	<div id="contenedorCursos" class="container m-auto">
+			<!--Aqui van los productos-->
 	</div>
-
-
 
 	<footer class="bgNavPropio">
 		<div>
@@ -132,9 +101,15 @@
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-  <script>
-  AOS.init();
-	</script>
-	
+  <!--JQuery-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <!--Sweeatalert-->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.all.min.js"></script>
+
+  <!--Mis scripts-->
+	<script src="js/scripts.js"></script>
+	<script src="js/carrito.js"></script>
+
 </body>
 </html>
